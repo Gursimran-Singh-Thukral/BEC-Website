@@ -1,0 +1,24 @@
+# Render Blueprint for the BEC API (the /server folder).
+# Render dashboard > New > Blueprint > pick this repo. It will ask for the three values marked "sync: false".
+services:
+  - type: web
+    name: bec-api
+    runtime: node
+    rootDir: server
+    plan: free                    # free instances sleep after ~15 min idle; use "starter" for always-on
+    region: singapore             # closest to India; change if you prefer
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATABASE_URL        # Postgres connection string (Neon recommended: free, does not expire)
+        sync: false
+      - key: API_JWT_SECRET      # any long random string; paste the SAME value into Vercel
+        sync: false
+      - key: ADMIN_EMAILS        # comma-separated @iitjammu.ac.in addresses; the first one is the owner
+        sync: false
+      - key: DATABASE_POOL_MAX
+        value: 5

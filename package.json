@@ -1,0 +1,14 @@
+{
+  "name": "bec-iitjammu",
+  "private": true,
+  "description": "BEC IIT Jammu: website (client) + API (server)",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "lint": "npm --prefix client run lint && npm --prefix server run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

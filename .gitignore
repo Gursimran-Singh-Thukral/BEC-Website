@@ -1,0 +1,20 @@
+# dependencies and build output
+node_modules
+.next
+dist
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets and local data
+.env
+.env.*
+!.env.example
+data
+.DS_Store
+*.pem
+*.log
+
+# source material that should not be published
+Design.html
+BEC_Orientation_Deck.pptx.pdf
+Gursimran Singh Thukral.jpg
