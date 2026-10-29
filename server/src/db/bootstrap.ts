@@ -30,19 +30,10 @@ type Seed = {
 
 const TEAM: Seed[] = [
   // Professors in charge
-  { name: "M T Arvind", slug: "mt-arvind", group: "faculty", role: "CIO, IIT Jammu" },
   { name: "Navneet Kumar", slug: "navneet-kumar", group: "faculty", role: "PIC, I2EDC" },
   { name: "Ankit Dubey", slug: "ankit-dubey", group: "faculty", role: "Ex-PIC, I2EDC" },
-  { name: "Nalin Sharma", slug: "nalin-sharma", group: "faculty", role: "PIC, I3C" },
-  { name: "Yogesh Nimdeo", slug: "yogesh-nimdeo", group: "faculty", role: "PIC, I3C" },
-  // Staff
-  { name: "Mohammad Israil", slug: "mohammad-israil", group: "staff", role: "Protospace in-charge" },
-  { name: "Namrit Bhardwaj", slug: "namrit-bhardwaj", group: "staff", role: "Tinkering Lab in-charge" },
-  { name: "Priyanka Manhas", slug: "priyanka-manhas", group: "staff", role: "Administration & Outreach in-charge" },
-  { name: "Sahil Sharma", slug: "sahil-sharma", group: "staff", role: "Lab technician" },
-  // Core team
+  // Core team — President + Heads only
   { name: "Sonu Patidar", slug: "sonu-patidar", group: "core", role: "President" },
-  { name: "Bhanu Mobarsa", slug: "bhanu-mobarsa", group: "core", role: "Senior Advisor" },
   { name: "Ansh", slug: "ansh", group: "core", role: "Event Management Head", vertical: "events", lead: true },
   { name: "Sarthak", slug: "sarthak", group: "core", role: "Outreach Head", vertical: "outreach", lead: true },
   { name: "Daksh", slug: "daksh", group: "core", role: "PR Head", vertical: "pr", lead: true },
@@ -50,12 +41,6 @@ const TEAM: Seed[] = [
   { name: "Manish R K", slug: "manish-rk", group: "core", role: "Design Head", vertical: "design", lead: true },
   { name: "Tharang", slug: "tharang", group: "core", role: "Inventory Head", vertical: "inventory", lead: true },
   { name: "Gursimran Singh Thukral", slug: "gursimran-singh-thukral", group: "core", role: "Web Dev Head", vertical: "tech", lead: true, topics: ["Web development"] },
-  // Strategy team
-  { name: "Dawik", slug: "dawik", group: "member", vertical: "strategy" },
-  { name: "Jai", slug: "jai", group: "member", vertical: "strategy" },
-  { name: "Siddharth", slug: "siddharth", group: "member", vertical: "strategy" },
-  { name: "Pari", slug: "pari", group: "member", vertical: "strategy" },
-  { name: "Sharav", slug: "sharav", group: "member", vertical: "strategy" },
 ];
 
 const HANDBOOKS = [
